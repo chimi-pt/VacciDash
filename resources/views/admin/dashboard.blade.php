@@ -5,5 +5,5 @@
         </h2>
     </x-slot>
 
-   
+    <center><h1>Admin Dashboard</h1></center>
 </x-app-layout>

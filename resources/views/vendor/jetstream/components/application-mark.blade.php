@@ -1,0 +1,1 @@
+<img src="https://img.icons8.com/ios-filled/100/000000/valorant.png"/>
