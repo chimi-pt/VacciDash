@@ -19,6 +19,12 @@
                 font-family: 'Nunito', sans-serif;
             }
         </style>
+
+        <style>
+            body {
+                background-image: url('../../background.png');
+            }
+        </style>
     </head>
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
@@ -35,7 +41,11 @@
                     @endauth
                 </div>
             @endif
-            <center><img src="https://img.icons8.com/ios-filled/500/000000/valorant.png"/><h1>VacciDash</h1></center>
+            <center>
+                <!--img src="https://img.icons8.com/ios-filled/500/000000/valorant.png"/-->
+                <h1>VacciDash</h1>
+                <h3>Vaccine Management System</h3>
+            </center>
            
             </div>
       
