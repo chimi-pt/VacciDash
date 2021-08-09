@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostList;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
 
@@ -29,3 +30,8 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::resource('users', \App\Http\Controllers\UsersController::class);
 });
+
+Route::get('/post-list', 'App\Http\Controllers\PostList')->name('post-list');
+Route::get('/posts', 'App\Http\Controllers\HomeController@index')->name('posts');
+
+// Route::resource('post-list', \App\Http\Controllers\PostList::class);

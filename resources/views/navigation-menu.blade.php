@@ -22,7 +22,16 @@
                         Users
                     </x-jet-nav-link>
                 </div>
-                @endcan
+                @endcan                                
+
+                @auth
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('post-list') }}" :active="request()->routeIs('posts-list*')">
+                        Vaccine Data
+                    </x-jet-nav-link>
+                </div>
+                @endauth
+               
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
