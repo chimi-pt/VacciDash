@@ -9,7 +9,14 @@ class Vaccine extends Model
 {
     use HasFactory;
 
+    protected $table = 'vaccines';
+
+    // protected $guarded=[];
+
     protected $fillable = [
-        'description'
+        'product_name',
+        'lot_number',
+        'amount(vials)',
+        'expiry_date',
     ];
 }

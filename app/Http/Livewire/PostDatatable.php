@@ -16,6 +16,7 @@ class PostDatatable extends Component
             'vaccine_id' => 'ID',
             'product_name' => 'Product Name',
             'lot_number' => 'Lot Number',
+            'amount(vials)' => 'Amount In Vials',
             'expiry_date' => 'Expiry Date',
             'created_at' => 'Created At',                     
         ];
@@ -28,7 +29,7 @@ class PostDatatable extends Component
 
     private function resultData()
     {
-        return Post::search('')->simplePaginate(3);
+        return Post::search('')->simplePaginate(5);
     }
 
     public function render()
