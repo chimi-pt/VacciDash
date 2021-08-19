@@ -18,11 +18,22 @@
             body {
                 font-family: 'Nunito', sans-serif;
             }
-        </style>
+        </style>       
 
         <style>
-            body {
-                background-image: url('../../background.png');
+            
+            /* Centered text */
+            .centered {
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .below-centered{
+                position: absolute;
+                top: 45%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
         </style>
     </head>
@@ -41,13 +52,23 @@
                     @endauth
                 </div>
             @endif
-            <center>
-                <!--img src="https://img.icons8.com/ios-filled/500/000000/valorant.png"/-->
+            <!--center>
+                <img src="{{ URL('storage/original.jpg') }}">
                 <h1>VacciDash</h1>
                 <h3>Vaccine Management System</h3>
-            </center>
-           
+                <div>
+                    <img src="{{ URL('storage/original.jpg') }}">
+                    <h1>VacciDash</h1>
+                    <h3>Vaccine Management System</h3>
+                </div>                               
+            </center-->
+            <div class="container">
+                <img src="{{ URL('storage/background.png') }}" style="width:100%; height:100%;">
+                <h1 class="centered">VacciDash</div>
+                <h3 class="below-centered">Vaccine Management System</h3-->
             </div>
+           
+        </div>
       
             
     </body>
