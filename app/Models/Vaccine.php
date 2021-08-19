@@ -18,5 +18,6 @@ class Vaccine extends Model
         'lot_number',
         'amount(vials)',
         'expiry_date',
+        'mfg_date'
     ];
 }

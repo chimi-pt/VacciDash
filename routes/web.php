@@ -34,7 +34,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('users', \App\Http\Controllers\UsersController::class);
 });
 
-Route::resource('vaccine', \App\Http\Controllers\VaccineController::class);
+Route::resource('/vaccine', \App\Http\Controllers\VaccineController::class);
 // Route::get('/vaccine', 'App\Http\Controllers\VaccineController@create')->name('vaccine.create');
 
 Route::get('/post-list', 'App\Http\Controllers\PostList')->name('post-list');
