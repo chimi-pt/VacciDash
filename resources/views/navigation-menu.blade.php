@@ -31,7 +31,14 @@
                     </x-jet-nav-link>
                 </div>
                 @endauth
-                
+
+                @auth
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('facilities.index') }}" :active="request()->routeIs('facilities.*')">
+                        Facilities
+                    </x-jet-nav-link>
+                </div>
+                @endauth              
                
             </div>
 
