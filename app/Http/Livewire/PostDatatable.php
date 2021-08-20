@@ -16,7 +16,8 @@ class PostDatatable extends Component
             'vaccine_id' => 'ID',
             'product_name' => 'Product Name',
             'lot_number' => 'Lot Number',
-            'amount(vials)' => 'Amount In Vials',
+            'vials' => 'Amount In Vials',
+            'mfg_date' => 'Manufacture Date',
             'expiry_date' => 'Expiry Date',
             'created_at' => 'Created At',                     
         ];

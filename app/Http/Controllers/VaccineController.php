@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Vaccine;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class VaccineController extends Controller
 {
@@ -77,13 +78,16 @@ class VaccineController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $vaccine
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-        //
-        // return view('vaccine.edit');
+        //   
+        $vaccines = Vaccine::all();
+        //if you want to get contacts on where condition use below code
+        //$contacts = Contact::Where('tenant_id', "1")->get();
+        return view('vaccine.edit', compact('vaccines'));
     }
 
     /**
@@ -96,6 +100,15 @@ class VaccineController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $product_name = $request->input('product_name');
+        $lot_number = $request->input('lot_number');
+        $vials = $request->input('vials');
+        $expiry_date = $request->input('expiry_date');
+        $mfg_date = $request->input('mfg_date');        
+        DB::update('update vaccines set product_name=?, lot_number=?,vials=?, expiry_date=? , mfg_date=? where vaccine_id=?',[$product_name,$lot_number,$vials,$expiry_date,$mfg_date,$id]);   
+
+        echo "Record updated successfully.<br/>";
+        return redirect()->route('post-list');
     }
 
     /**
