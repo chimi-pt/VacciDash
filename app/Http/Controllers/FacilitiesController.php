@@ -29,7 +29,7 @@ class FacilitiesController extends Controller
      */
     public function create()
     {
-        //return view('facilities.create');
+        return view('facilities.create');
     }
 
     /**
@@ -40,7 +40,15 @@ class FacilitiesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        /* $this->validate(request(),[
+            //put fields to be validated here
+
+                'product_name' => 'required'
+            ]);
+            */
+
+            $facility = Facility::create($request->all()); 
+            return redirect()->route('facilities.index')->with('message', 'New Facility added!');
     }
 
     

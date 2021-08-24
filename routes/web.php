@@ -36,8 +36,11 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::resource('/facilities', \App\Http\Controllers\FacilitiesController::class);
 
-Route::resource('/vaccine', \App\Http\Controllers\FacilitiesController::class);
+Route::resource('/vaccine', \App\Http\Controllers\VaccineController::class);
 // Route::get('/vaccine', 'App\Http\Controllers\VaccineController@create')->name('vaccine.create');
+
+// Route for charts--index
+Route::get('/charts', 'App\Http\Controllers\ChartsController@index')->name('charts.index');
 
 Route::get('/post-list', 'App\Http\Controllers\PostList')->name('post-list');
 Route::get('/posts', 'App\Http\Controllers\HomeController@index')->name('posts');
