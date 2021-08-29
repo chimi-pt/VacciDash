@@ -25,6 +25,15 @@
                         </div>
 
                         <div class="px-4 py-5 bg-white sm:p-6">
+                            <label for="facility" class="block font-medium text-sm text-gray-700">Medical Facility</label>
+                            <input type="text" name="facility" id="facility" class="form-input rounded-md shadow-sm mt-1 block w-full"
+                                   value="{{ old('facility', $user->facility) }}" />
+                            @error('facility')
+                                <p class="text-sm text-red-600">{{ $message }}</p>
+                            @enderror
+                        </div>
+
+                        <div class="px-4 py-5 bg-white sm:p-6">
                             <label for="email" class="block font-medium text-sm text-gray-700">Email</label>
                             <input type="email" name="email" id="email" class="form-input rounded-md shadow-sm mt-1 block w-full"
                                    value="{{ old('email', $user->email) }}" />
