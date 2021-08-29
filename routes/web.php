@@ -42,6 +42,18 @@ Route::resource('/vaccine', \App\Http\Controllers\VaccineController::class);
 // Route for charts--index
 Route::get('/charts', 'App\Http\Controllers\ChartsController@index')->name('charts.index');
 
+/*
+    These are the routes for the individual 
+        vaccine tables of the various facilities
+*/
+
+Route::resource('/nairobi', \App\Http\Controllers\VaccineNaiController::class);
+
+
+/*
+    --end routes ;)
+*/
+
 Route::get('/post-list', 'App\Http\Controllers\PostList')->name('post-list');
 Route::get('/posts', 'App\Http\Controllers\HomeController@index')->name('posts');
 
