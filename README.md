@@ -3,7 +3,6 @@ Vaccine Management System
 
 To run the project on your local PC;
 1. Find a location on your computer where you want to store the project.
--Find a location on your computer where you want to store the project.
 -Running the command below; will pull the project from github and create a copy of it on your local computer at your specified directory.
 -You can change the name of this folder it creates, by changing the last part of the code snippet below to match the name you want your folder to be called.
 
