@@ -68,6 +68,7 @@
                                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                                             <a href="{{ route('facilities.show', $facility->id) }}" class="text-blue-600 hover:text-blue-900 mb-2 mr-2">View</a>
                                             <a href="{{ route('facilities.edit', $facility->id) }}" class="text-indigo-600 hover:text-indigo-900 mb-2 mr-2">Edit</a>
+                                            <a href="{{ route('nairobi.index', $facility->id) }}" class="text-indigo-600 hover:text-indigo-900 mb-2 mr-2">Vaccines</a>
                                             <form class="inline-block" action="" method="POST" onsubmit="return confirm('Are you sure you want to disable this facility?');">
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">

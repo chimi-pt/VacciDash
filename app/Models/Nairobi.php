@@ -14,11 +14,12 @@ class Nairobi extends Model
     protected $table = 'vt_nairobi';
 
     protected $fillable = [
-        'product_name',
+        'name',
         'lot_number',
+        'status',
         'vials',
         'temperature',
-        'description',
+        // 'description',
         'expiry_date',
         'mfg_date'
     ];

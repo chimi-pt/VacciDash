@@ -29,7 +29,7 @@ class VaccineNaiController extends Controller
      */
     public function create()
     {
-        //
+        return view('nairobi.create');
     }
 
     /**
@@ -40,7 +40,8 @@ class VaccineNaiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $nairobi = Nairobi::create($request->all()); 
+        return redirect()->route('nairobi.index')->with('message', 'New Vaccine added!');
     }
 
     
