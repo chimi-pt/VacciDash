@@ -1,14 +1,17 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Input New Facility
+            Add New Facility
         </h2>
     </x-slot>
 
     <div>
         <div class="max-w-4xl mx-auto py-10 sm:px-6 lg:px-8">
+            <div class="block mb-8">
+                    <a href="{{ route('facilities.index') }}" class="bg-gray-200 hover:bg-gray-300 text-black font-bold py-2 px-4 rounded">Cancel</a>
+            </div>
             <div class="mt-5 md:mt-0 md:col-span-2">
-                <form method="post" action="">
+                <form method="post" action="{{ route('facilities.store') }}">
                     @csrf
                     <div class="shadow overflow-hidden sm:rounded-md">
                         <div class="px-4 py-5 bg-white sm:p-6">
@@ -21,30 +24,28 @@
                         </div>
 
                         <div class="px-4 py-5 bg-white sm:p-6">
-                            <label for="email" class="block font-medium text-sm text-gray-700">Email</label>
-                            <input type="email" name="email" id="email" class="form-input rounded-md shadow-sm mt-1 block w-full"
-                                   value="{{ old('email', '') }}" />
-                            @error('email')
+                            <label for="administrator" class="block font-medium text-sm text-gray-700">Administrator</label>
+                            <input type="text" name="administrator" id="administrator" class="form-input rounded-md shadow-sm mt-1 block w-full"
+                                   value="{{ old('administrator', '') }}" />
+                            @error('administrator')
                                 <p class="text-sm text-red-600">{{ $message }}</p>
                             @enderror
                         </div>
 
                         <div class="px-4 py-5 bg-white sm:p-6">
-                            <label for="password" class="block font-medium text-sm text-gray-700">Password</label>
-                            <input type="password" name="password" id="password" class="form-input rounded-md shadow-sm mt-1 block w-full" />
-                            @error('password')
+                            <label for="county" class="block font-medium text-sm text-gray-700">County</label>
+                            <input type="text" name="county" id="county" class="form-input rounded-md shadow-sm mt-1 block w-full"
+                                   value="{{ old('county', '') }}" />
+                            @error('county')
                                 <p class="text-sm text-red-600">{{ $message }}</p>
                             @enderror
                         </div>
 
                         <div class="px-4 py-5 bg-white sm:p-6">
-                            <label for="roles" class="block font-medium text-sm text-gray-700">Roles</label>
-                            <select name="roles[]" id="roles" class="form-multiselect block rounded-md shadow-sm mt-1 block w-full" multiple="multiple">
-                                @foreach($roles as $id => $role)
-                                    <option value="{{ $id }}"{{ in_array($id, old('roles', [])) ? ' selected' : '' }}>{{ $role }}</option>
-                                @endforeach
-                            </select>
-                            @error('roles')
+                            <label for="mfl_code" class="block font-medium text-sm text-gray-700">MFL CODE</label>
+                            <input type="text" name="mfl_code" id="mfl_code" class="form-input rounded-md shadow-sm mt-1 block w-full"
+                                   value="{{ old('mfl_code', '') }}" />
+                            @error('mfl_code')
                                 <p class="text-sm text-red-600">{{ $message }}</p>
                             @enderror
                         </div>

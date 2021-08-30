@@ -7,6 +7,9 @@
 
     <div>
         <div class="max-w-4xl mx-auto py-10 sm:px-6 lg:px-8">
+            <div class="block mb-8">
+                <a href="{{ route('users.index') }}" class="bg-gray-200 hover:bg-gray-300 text-black font-bold py-2 px-4 rounded">Cancel</a>
+            </div>
             <div class="mt-5 md:mt-0 md:col-span-2">
                 <form method="post" action="{{ route('users.update', $user->id) }}">
                     @csrf
@@ -17,6 +20,15 @@
                             <input type="text" name="name" id="name" class="form-input rounded-md shadow-sm mt-1 block w-full"
                                    value="{{ old('name', $user->name) }}" />
                             @error('name')
+                                <p class="text-sm text-red-600">{{ $message }}</p>
+                            @enderror
+                        </div>
+
+                        <div class="px-4 py-5 bg-white sm:p-6">
+                            <label for="facility" class="block font-medium text-sm text-gray-700">Medical Facility</label>
+                            <input type="text" name="facility" id="facility" class="form-input rounded-md shadow-sm mt-1 block w-full"
+                                   value="{{ old('facility', $user->facility) }}" />
+                            @error('facility')
                                 <p class="text-sm text-red-600">{{ $message }}</p>
                             @enderror
                         </div>
