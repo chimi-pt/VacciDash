@@ -6,7 +6,10 @@ To run the project on your local PC;
 -Running the command below; will pull the project from github and create a copy of it on your local computer at your specified directory.
 -You can change the name of this folder it creates, by changing the last part of the code snippet below to match the name you want your folder to be called.
 
+```
 git clone linktogithubrepo.com/ projectName
+
+```
 
 2. cd into the project
 cd projectName
