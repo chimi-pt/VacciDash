@@ -1,5 +1,5 @@
-VacciDash
-Vaccine Management System
+# VacciDash
+# Vaccine Management System
 
 To run the project on your local PC;
 1. Find a location on your computer where you want to store the project.
