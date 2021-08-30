@@ -1,7 +1,7 @@
 # VacciDash
 # Vaccine Management System
 
-##To run the project on your local PC;
+## To run the project on your local PC;
 
 ### 1. Find a location on your computer where you want to store the project.
 -Running the command below; will pull the project from github and create a copy of it on your local computer at your specified directory.
