@@ -10,38 +10,42 @@ To run the project on your local PC;
 git clone linktogithubrepo.com/ projectName
 ```
 
-2. cd into the project
+### 2. cd into the project
 ```
 cd projectName
 ```
 
-3. Install Composer Dependencies
+### 3. Install Composer Dependencies
+You must now install all of the project dependencies. This is what actually installs Laravel itself, among other necessary packages to get started.
 ```
 composer install
 ```
 
-4. Install NPM Dependencies
+### 4. Install NPM Dependencies
 ```
 npm install
 ```
 
-5. Create a copy of your .env file
+### 5. Create a copy of your .env file
+This a file that contains our projects sytems' configurations such as; the database configuration.
 ```
 cp .env.example .env
 ```
 
-6. Generate an app encryption key
+### 6. Generate an app encryption key
+Laravel requires you to have an app encryption key which is generally randomly generated and stored in your .env file. 
+The app will use this encryption key to encode various elements of your application from cookies to password hashes and more.
 ```php
 php artisan key:generate
 ```
 
-7. Create an empty database for our application
-Create an empty database for your project using the database tools you prefer
+### 7. Create an empty database for the application
+*Create an empty database* for your project using the database tools you prefer.
 
-8. In the .env file, add database information to allow Laravel to connect to the database
+### 8. In the .env file, add database information to allow Laravel to connect to the database
 In the .env file fill in the DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, and DB_PASSWORD options to match the credentials of the database you just created. 
 
-9. Migrate the database
+### 9. Migrate the database
 ```
 php artisan migrate
 ```
