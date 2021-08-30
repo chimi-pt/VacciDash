@@ -62,7 +62,6 @@
 
                         <div class="px-4 py-5 bg-white sm:p-6">
                             <label for="mfg_date" class="block font-medium text-sm text-gray-700">Manufacture Date</label>
-                            <input type="text" name="mfg_date" id="mfg_date" class="form-input rounded-md shadow-sm mt-1 block w-full"
                             <input type="date" name="mfg_date" id="mfg_date" class="form-input rounded-md shadow-sm mt-1 block w-full"
                                    value="{{ old('mfg_date', $nairobi->mfg_date) }}" />
                             @error('mfg_date')
@@ -72,7 +71,6 @@
 
                         <div class="px-4 py-5 bg-white sm:p-6">
                             <label for="expiry_date" class="block font-medium text-sm text-gray-700">Expiry Date</label>
-                            <input type="text" name="expiry_date" id="expiry_date" class="form-input rounded-md shadow-sm mt-1 block w-full"
                             <input type="date" name="expiry_date" id="expiry_date" class="form-input rounded-md shadow-sm mt-1 block w-full"
                                    value="{{ old('expiry_date', $nairobi->expiry_date) }}" />
                             @error('expiry_date')
